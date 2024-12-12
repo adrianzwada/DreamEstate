@@ -5,7 +5,10 @@ import project4 from '../assets/project-4.jpg'
 import project5 from '../assets/project-5.jpg'
 import project6 from '../assets/project-6.jpg'
 import project7 from '../assets/project-7.jpg'
-
+import person_1 from '../assets/person_1.jpg'
+import person_2 from '../assets/person_2.jpg'
+import person_3 from '../assets/person_3.jpg'
+import star from '../assets/star.png'
 export const assets = {
 	project1,
 	project2,
@@ -14,6 +17,10 @@ export const assets = {
 	project5,
 	project6,
 	project2,
+	person_1,
+	person_2,
+	person_3,
+	star,
 }
 export const projectsData = [
 	{
@@ -57,5 +64,28 @@ export const projectsData = [
 		price: '$100,000',
 		location: 'Boston, MA',
 		image: project7,
+	},
+]
+export const testimonialsData = [
+	{
+		name: 'John Doe',
+		title: 'Satisfied Homeowner',
+		rating: 5,
+		text: "DreamEstate made our home buying experience incredibly smooth. Their team was knowledgeable, patient, and always available to answer our questions. We're so grateful for their help in finding our dream home!",
+		image: person_1,
+	},
+	{
+		name: 'Jane Smith',
+		title: 'Successful Investor',
+		rating: 5,
+		text: "As an investor, I've worked with many real estate agents, but DreamEstate stands out. Their expertise in market trends and negotiation skills helped me secure profitable deals. I highly recommend their services.",
+		image: person_2,
+	},
+	{
+		name: 'Michael Johnson',
+		title: 'Business Owner',
+		rating: 5,
+		text: "DreamEstate assisted us in finding the perfect commercial space for our growing business. Their attention to detail and understanding of our specific needs were impressive. We're thrilled with the outcome.",
+		image: person_3,
 	},
 ]

@@ -7,7 +7,7 @@ function About() {
 			className='flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden'
 			id='About'
 		>
-			<h2 className='text-4xl sm:text-5xl font-bold mb-2'>
+			<h2 className='text-2xl sm:text-5xl font-bold mb-2'>
 				About <span className='underline underline-offset-4 decoration-1 font-light'>Our Company</span>
 			</h2>
 			<p className='text-gray-500 max-w-80 text-center mb-8'>

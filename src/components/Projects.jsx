@@ -11,11 +11,11 @@ function Projects() {
 			if (window.innerWidth >= 1024) {
 				setCardsToShow(projectsData.length)
 			} else setCardsToShow(1)
-        }
+		}
 		updateCards()
 		window.addEventListener('resize', updateCards)
 		return () => window.removeEventListener('resize', updateCards)
-    },[])
+	}, [])
 	const nextCard = () => {
 		setCurrentIndex(prevIndex => (prevIndex + 1) % projectsData.length)
 	}
@@ -24,8 +24,8 @@ function Projects() {
 	}
 
 	return (
-		<div className='container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hiden' id='Pojects'>
-			<h1 className='text-2xl xm:text-4xl font-bold mb-2 text-center'>
+		<div className='container mx-auto py-4 pt-10 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hiden' id='Projects'>
+			<h1 className='text-2xl sm:text-4xl font-bold mb-2 text-center'>
 				Projects <span className='underline underline-offset-4 decoration-1 under font-light'>Completed</span>
 			</h1>
 			<p className='text-center text-gray-500 mb-8 max-w-80 mx-auto'>
