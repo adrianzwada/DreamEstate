@@ -1,12 +1,14 @@
 import React from 'react'
 import { toast } from 'react-toastify'
-
 function Contact() {
 
 	const apiKey = import.meta.env.VITE_API_KEY;
 	const apiUrl = import.meta.env.VITE_API_URL;
+	console.log('API URL:', apiUrl);
+	console.log('API Key:', apiKey);
 	const [result, setResult] = React.useState('')
 	const onSubmit = async event => {
+		
 		event.preventDefault()
 		setResult('Sending....')
 		const formData = new FormData(event.target)
@@ -26,10 +28,14 @@ function Contact() {
 			event.target.reset()
 		} else {
 			console.log('Error', data)
+			console.log('error please check')
 			toast.error(data.message)
 			setResult('')
 		}
 	}
+	console.log(import.meta.env.VITE_API_KEY);
+	console.log(import.meta.env.VITE_API_URL); 
+
 	return (
 		<div className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden' id='Contact'>
 			<h2 className='text-2xl sm:text-4xl font-bold mb-2 text-center'>
