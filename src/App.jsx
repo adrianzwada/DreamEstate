@@ -15,7 +15,6 @@ function App() {
 			<Projects />
 			<Testimontials />
 			<Contact />
-			<div>asdasd</div>
 		</div>
 	)
 }

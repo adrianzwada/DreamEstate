@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import leftarrow from '../../src/assets/left-arrow.png'
 import rightarow from '../../src/assets/right-arrow.png'
 import { assets, projectsData } from '../../src/assets/assets.js'
+import { motion } from 'framer-motion'
 function Projects() {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [cardsToShow, setCardsToShow] = useState(1)
@@ -24,7 +25,12 @@ function Projects() {
 	}
 
 	return (
-		<div className='container mx-auto py-4 pt-10 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hiden' id='Projects'>
+		<motion.div
+			initial={{opacity:0, x:-200}}
+			transition={{duration:1}}
+			whileInView={{opacity:1, x:0}}
+			viewport={{once:true}}
+			className='container mx-auto py-4 pt-10 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hiden' id='Projects'>
 			<h1 className='text-2xl sm:text-4xl font-bold mb-2 text-center'>
 				Projects <span className='underline underline-offset-4 decoration-1 under font-light'>Completed</span>
 			</h1>
@@ -60,7 +66,7 @@ function Projects() {
 					))}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

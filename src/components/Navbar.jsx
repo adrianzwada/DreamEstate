@@ -38,6 +38,11 @@ export const Navbar = () => {
 							Testimonials
 						</a>
 					</li>
+					<li>
+						<a href='#Contact' className='cursor-pointer hover:text-gray-400 transition'>
+							Contact
+						</a>
+					</li>
 				</ul>
 
 				<div className='flex md:hidden'>
@@ -80,6 +85,11 @@ export const Navbar = () => {
 					<li>
 						<a href='#Testimonials' className='cursor-pointer hover:text-gray-400 transition' onClick={toggleMenu}>
 							Testimonials
+						</a>
+					</li>
+					<li>
+						<a href='#Contact' className='cursor-pointer hover:text-gray-400 transition' onClick={toggleMenu}>
+							Contact
 						</a>
 					</li>
 				</ul>

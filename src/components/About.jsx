@@ -1,9 +1,13 @@
 import React from 'react'
 import about from '../assets/about-me.jpg'
-
+import { motion } from 'framer-motion'
 function About() {
 	return (
-		<div
+		<motion.div
+			initial={{opacity:0, x:200}}
+			transition={{duration:1}}
+			whileInView={{opacity:1, x:0}}
+			viewport={{once:true}}
 			className='flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden'
 			id='About'
 		>
@@ -13,8 +17,7 @@ function About() {
 			<p className='text-gray-500 max-w-80 text-center mb-8'>
 				Passionate About Properties, Committed to Your Dream Home
 			</p>
-			{/* Fixed className from 'class' to 'className' */}
-			<div className='flex flex-col md:flex-row items-center md:items-start md:gap-20'>
+			<motion.div className='flex flex-col md:flex-row items-center md:items-start md:gap-20'>
 				<img
 					src={about}
 					alt='About Our Company'
@@ -39,8 +42,6 @@ function About() {
 							<p>Ongoing Projects</p>
 						</div>
 					</div>
-
-					{/* Adjusted spacing with my-10 for better margin */}
 					<p className='my-10 max-w-lg text-justify'>
 						At <span className='font-bold'>DreamEstate</span>, we prioritize quality, dedication, and client
 						satisfaction. With over a decade of expertise in the real estate industry, we’ve helped countless families
@@ -48,7 +49,6 @@ function About() {
 						handled with precision and care.
 					</p>
 
-					{/* Ensuring enough space between content and button */}
 					<a
 						href='#contact'
 						className='mt-8 flex items-center px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition duration-300'
@@ -56,8 +56,8 @@ function About() {
 						Contact Us Today
 					</a>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	)
 }
 

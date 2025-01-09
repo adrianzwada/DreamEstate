@@ -1,5 +1,6 @@
 import React from 'react'
 import { toast } from 'react-toastify'
+import { motion } from 'framer-motion';
 function Contact() {
 
 	const apiKey = import.meta.env.VITE_API_KEY;
@@ -28,16 +29,17 @@ function Contact() {
 			event.target.reset()
 		} else {
 			console.log('Error', data)
-			console.log('error please check')
 			toast.error(data.message)
 			setResult('')
 		}
 	}
-	console.log(import.meta.env.VITE_API_KEY);
-	console.log(import.meta.env.VITE_API_URL); 
-
 	return (
-		<div className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden' id='Contact'>
+		<motion.div
+			initial={{opacity:0, x:-200}}
+			transition={{duration:1}}
+			whileInView={{opacity:1, x:0}}
+			viewport={{once:true}}
+		 	className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden' id='Contact'>
 			<h2 className='text-2xl sm:text-4xl font-bold mb-2 text-center'>
 				Contact <span className='underline underline-offset-4 decoration-1 under font-light'>With Us</span>
 			</h2>
@@ -79,7 +81,7 @@ function Contact() {
 				</div>
 				<button className='bg-blue-600 text-white py-2 px-12 mb-10 rounded'>{result ? result : 'Send Message'}</button>
 			</form>
-		</div>
+		</motion.div>
 	)
 }
 
