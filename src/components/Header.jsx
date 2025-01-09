@@ -4,6 +4,13 @@ import headerImage from '../../src/assets/header-large2.jpg'
 import { motion } from 'framer-motion'
 
 function Header() {
+	const motionProps = {
+		initial: { opacity: 0, x: 200 },
+		transition: { duration: 1 },
+		whileInView: { opacity: 1, x: 0 },
+		viewport: { once: true },
+	};
+
 	return (
 		<header
 			className='min-h-screen mb-0 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden relative'
@@ -12,10 +19,7 @@ function Header() {
 		>
 			<Navbar />
 			<motion.div
-			initial={{opacity:0, y:100}}
-			transition={{duration:1.5}}
-			whileInView={{opacity:1, y:0}}
-			viewport={{once:true}}
+			{...motionProps}
 			className='container text-center text-black text-lg p-4 absolute top-[20%]' style={{ transform: 'translateY(-50%)' }}>
 				<h2 className='text-4xl font-bold mb-4'>"The ache for home lives in all of us."</h2>
 				<p className='text-lg font-light'>Let us help you feel it.</p>

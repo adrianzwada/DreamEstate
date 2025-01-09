@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import logonobackgroundv2 from '../../src/assets/logo-no-background-v2.png'
 
 export const Navbar = () => {
-	// State to manage the mobile menu visibility
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-	// Toggle the menu visibility
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
 	}
