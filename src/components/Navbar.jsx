@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logonobackgroundv2 from '../../src/assets/logo-no-background-v2.png'
+import logo from '../../src/assets/apple-touch-icon-removebg-preview.png'
 
 export const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,8 +10,8 @@ export const Navbar = () => {
 	return (
 		<nav className='absolute top-0 left-0 w-full z-10'>
 			<div className='container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent'>
-				<div className='w-28 md:w-40'>
-					<img src={logonobackgroundv2} alt='Logo' className='w-full' />
+				<div className='w-28 md:w-40 '>
+					<img src={logo} alt='Logo' className='w-full' />
 				</div>
 
 				<ul className='hidden md:flex gap-8 text-black text-lg'>
