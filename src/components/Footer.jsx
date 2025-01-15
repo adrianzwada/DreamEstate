@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 text-gray-400">
           <img src={logo} alt="Company logo" className="h-50" />
-          <p className="mt-2 mb-6">Real Stories from Those Who Found Home</p>
+          <p className="mt-2 mb-6">"Real Stories from Those Who Found Home"</p>
         </div>
         <div className="w-full md:w-1/5 mb-8 md:mb-0">
           <h3 className="text-white text-lg font-bold mb-4">Company</h3>
